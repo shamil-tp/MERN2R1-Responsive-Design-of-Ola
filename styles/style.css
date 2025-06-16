@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+/* NAV */
+
+.nav {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.612);
+    display: flex;
+    padding: 2% 3%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__nav-item {
+    padding: 3px;
+}
+
+.nav-item--bars {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: white;
+    padding: 1.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* OLA HERO SECTION */
+
+.ola-hero {
+    width: 100%;
+    /* height: 100vh; */
+    background-image: url(../images/ola-hero-section__background.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    border: 2px solid rgb(250, 244, 244);
+}
+
+.ola-hero__banner {
+    width: 100%;
+    z-index: -2;
+    position: absolute;
+}
+
+.ola-hero__banner--mobile {
+    display: none;
+}
+
+.ola-hero__content {
+    border: 2px solid rgb(251, 2, 2);
+    padding: 2% 4% 0 4%;
+}
+
+.ola-hero__paragraph {
+    border: 2px solid rgb(2, 251, 23);
+    padding-bottom: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.ola-hero__paragraph--heading {
+    width: calc(100% / 3);
+    border: 2px solid rgb(56, 2, 251);
+    text-align: center;
+    font-weight: 600;
+}
+
+.ola-hero__paragraph--text {
+    width: calc(100% / 3);
+    border: 2px solid rgb(251, 2, 151);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    word-spacing: 1px;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+}
+
+.ola-hero__button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.ola-hero__button {
+    padding: 20px 50px;
+    border: none;
+    border-radius: none;
+    font-weight: 600;
+}
+
+.ola-hero__button--button-right {
+    background-color: rgba(255, 255, 255, 0.177);
+    backdrop-filter: blur(10px);
+    color: white;
+}
+.ola-cards__heading--text{
+    font-weight: 500;
+    font-size: 40px;
+}
+
+@media (max-width:900px) {
+    .ola-hero__paragraph--heading {
+        width: calc(100% / 1);
+    }
+
+    .ola-hero__paragraph--text {
+        width: calc(100% / 1);
+    }
+}
+
+@media (max-width:576px) {
+    .nav-item--bars {
+        background-color: transparent;
+        color: white;
+    }
+    .ola-hero{
+        background:url(../images/ola-hero-section__backround--mobile.webp);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    /* .ola-hero__banner--mobile{
+        display: inline;
+    }
+    .ola-hero__banner--desktop{
+        display: none;
+    } */
+    .ola-hero__button-container{
+        padding:30% 0;
+    }
+    .ola-hero__button{
+        font-size: 12px;
+        padding: 2% 4%;
+    }
+    .ola-cards__heading--text{
+    font-weight: 500;
+    font-size: 30px;
+}
+}
