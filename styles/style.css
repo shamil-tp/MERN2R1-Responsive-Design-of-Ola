@@ -55,12 +55,12 @@
 }
 
 .ola-hero__content {
-    border: 2px solid rgb(251, 2, 2);
+    border: 2px solid rgba(251, 2, 2, 0);
     padding: 2% 4% 0 4%;
 }
 
 .ola-hero__paragraph {
-    border: 2px solid rgb(2, 251, 23);
+    border: 2px solid rgba(2, 251, 23, 0);
     padding-bottom: 40%;
     display: flex;
     flex-direction: column;
@@ -70,14 +70,14 @@
 
 .ola-hero__paragraph--heading {
     width: calc(100% / 3);
-    border: 2px solid rgb(56, 2, 251);
+    border: 2px solid rgba(56, 2, 251, 0);
     text-align: center;
     font-weight: 600;
 }
 
 .ola-hero__paragraph--text {
     width: calc(100% / 3);
-    border: 2px solid rgb(251, 2, 151);
+    border: 2px solid rgba(251, 2, 151, 0);
     font-size: 15px;
     font-weight: 600;
     letter-spacing: -1px;
@@ -106,10 +106,73 @@
     backdrop-filter: blur(10px);
     color: white;
 }
+.ola-cards{
+    padding: 25px 7%;
+}
+.ola-cards__heading{
+    margin-bottom: 10px;
+}
 .ola-cards__heading--text{
     font-weight: 500;
     font-size: 40px;
 }
+.ola-cards__card--contents{
+    padding: 2%;
+}
+.ola-cards__card-overflow{
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 10px;
+    overflow-x: scroll;
+
+}
+.ola-cards__card{
+    flex-shrink: 0;
+    flex-basis: auto;
+    width: 300px;
+    border: 2px solid lightgray;
+    border-top: none;
+
+}
+.card--image{
+    width: 100%;
+    object-fit:scale-down;
+    transition: 0.3s ease-in-out;
+
+}
+.ola-cards__card:hover{
+    border-top: 2px solid lightgray;
+    border-radius: 15px 15px 0 0;
+}
+.ola-cards__card:hover .card--image{
+    height: 100%;
+    border-radius:15px 15px 0 0;
+    scale: 1.01;
+}
+.ola-cards__card--texts{
+    padding: 10px;
+    border-bottom: 1px solid rgb(238, 231, 231);
+}
+.ola-cards__pricings{
+    padding:0 0 0 10px;
+}
+.ola-cards__pricings p:nth-child(1){
+    font-size: 14px;
+    text-transform: capitalize;
+    color: rgb(218, 215, 215);
+}
+.ola-cards__pricings p:nth-child(2){
+    font-size: 20px;
+}
+.ola-cards__pricings p:nth-child(3){
+    font-size: 12px;
+}
+.ola-cards__pricings p:nth-child(3) span{
+    color: rgb(218, 215, 215);
+}
+.ola-cards__heading h1:nth-child(2) span{
+        display: none;
+    }
 
 @media (max-width:900px) {
     .ola-hero__paragraph--heading {
@@ -119,6 +182,13 @@
     .ola-hero__paragraph--text {
         width: calc(100% / 1);
     }
+    .ola-cards__heading h1:nth-child(1) span{
+        display: none;
+    }
+    .ola-cards__heading h1:nth-child(2) span{
+        display: inline;
+    }
+
 }
 
 @media (max-width:576px) {
@@ -148,5 +218,12 @@
     .ola-cards__heading--text{
     font-weight: 500;
     font-size: 30px;
-}
+    }
+    .ola-cards__heading h1:nth-child(1) span{
+        display: none;
+    }
+    .ola-cards__heading h1:nth-child(2) span{
+        display: inline;
+    }
+
 }
