@@ -41,7 +41,7 @@
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    border: 2px solid rgb(250, 244, 244);
+    border: 2px solid rgba(250, 244, 244, 0);
 }
 
 .ola-hero__banner {
