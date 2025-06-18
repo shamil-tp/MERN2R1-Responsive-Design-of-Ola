@@ -124,12 +124,13 @@
     /* flex-wrap: wrap; */
     gap: 10px;
     overflow-x: scroll;
+    scrollbar-color: linear-gradient;
 
 }
 .ola-cards__card{
     flex-shrink: 0;
     flex-basis: auto;
-    width: 300px;
+    width: calc(100% / 3 - 10px);
     border: 2px solid lightgray;
     border-top: none;
 
@@ -210,6 +211,9 @@
     .ola-cards__heading h1:nth-child(2) span{
         display: inline;
     }
+    .ola-cards__card{
+        width: calc(100% / 2 - 10px);
+    }
 
 }
 
@@ -247,5 +251,7 @@
     .ola-cards__heading h1:nth-child(2) span{
         display: inline;
     }
-
+    .ola-cards__card{
+        width: calc(100% - 10px)
+    }
 }
