@@ -184,7 +184,7 @@
 }
 .ola-card__button{
     width: 100%;
-    padding: 20px 50px;
+    padding: 20px 0;
     border: none;
     border-radius: none;
     font-weight: 600;
